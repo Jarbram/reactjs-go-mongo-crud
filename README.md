@@ -9,9 +9,9 @@ In this week, i tryed to build a crud app about register and admi users.The tecn
 **Clonar aplicacion desde github**
 git clone https://github.com/Jarbram/reactjs-go-mongo-crud.git
 
--cd client
--npm i
--npm run build
+- cd client
+- npm i
+- npm run build
 
--cd ..
--go run .
+- cd ..
+- go run .

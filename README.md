@@ -7,7 +7,7 @@ docker run -d -p 27017:27017 --name gomongodb mongo
 docker ps 
 
 # Clonar aplicacion desde github
-git clone https://github.com/FranciscoOrtizCastillo/go-react-project.git
+git clone https://github.com/Jarbram/reactjs-go-mongo-crud.git
 
 cd client
 npm i

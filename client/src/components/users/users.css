@@ -1,0 +1,53 @@
+.participants_container{
+    padding-top:5rem;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+    background: rgb(221, 236, 228);
+    height:100%;
+}
+.participants_title{
+    margin-bottom:2rem;
+    color: rgb(79, 76, 80);
+}
+.edit{
+    cursor: pointer;
+    font-size:34px;
+}
+.edit_title{
+    color: rgb(79, 76, 80);
+}
+.users_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.users{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-left:2rem;
+    width: 250px;
+    height:5rem;
+    padding: 2rem 1rem 1rem 1rem;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    background-color:rgb(254, 254, 254);
+    border-radius:0.5rem ;
+}
+.users li{
+    margin-bottom: 0.7rem;
+    
+}
+.users a{
+    cursor: pointer;
+    margin-right:1rem;
+    font-size:24px;
+}
+.users .delete{
+    color:rgb(217, 26, 26);
+}

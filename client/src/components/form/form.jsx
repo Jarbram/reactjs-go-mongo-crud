@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react'
+import React, {useState} from 'react'
 import './form.css'
 
 
@@ -10,7 +10,7 @@ function Form  () {
 
   const handleSubmit = async(e) =>{
     e.preventDefault();
-    const response = await fetch('/users',{
+    const response = await fetch("/api/users",{
       method: 'POST',
       body: JSON.stringify({username,email,password}),
       headers: {

@@ -67,11 +67,13 @@ func PutUser(c *fiber.Ctx) error {
 	id := c.Params("id")
 	newId, _ := primitive.ObjectIDFromHex(id)
 
-	filter := bson.M{"_id": newId}
-	update := bson.M{"$set": bson.M{"username": user.Username, "email": user.Email, "password": user.Password}}
-
 	coll := db.DB.Database("gomongodb").Collection("users")
-	result, err := coll.UpdateOne(context.TODO(), filter, update)
+	result, err := coll.ReplaceOne(context.TODO(), bson.M{"id": newId}, bson.M{
+		"username": user.Username,
+		"email":    user.Email,
+		"password": user.Password,
+	})
+
 	if err != nil {
 		log.Fatal(err)
 	}

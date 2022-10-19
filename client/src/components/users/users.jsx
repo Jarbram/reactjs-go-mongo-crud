@@ -18,24 +18,24 @@ function Users  ()  {
 
 
     async function loadUsers() {
-    const response = await fetch('/users')
+    const response = await fetch("/api/users");
     const data = await response.json();
     setUsers(data.users);
     }
 
     async function DeleteData(id)
     {
-        let result = await fetch('http://localhost:3000/users/' + id, {
+        let result = await fetch("/api/users" + id, {
             method: 'DELETE'
         });
-        const data = await result.json()
+        const data = await result.json();
         console.warn(data);
         loadUsers()
     }
 
     useEffect(() => {
     loadUsers();
-    },[]);
+    });
 
 
     

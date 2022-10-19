@@ -10,7 +10,7 @@ function EditForm(props){
     const handleEditSubmit= async(e,id)=>{
         e.preventDefault();
         console.log(id)
-        const response = await fetch('http://localhost:3000/users/' + id, {
+        const response = await fetch('api/users/' + id, {
         method: 'PUT',
         body: JSON.stringify({username,email,password}),
         headers: {
